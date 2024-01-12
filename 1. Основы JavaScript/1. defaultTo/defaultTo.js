@@ -1,5 +1,9 @@
 const defaultTo = (value, defaultValue) => {
   // Пишите код здесь
+  if (value == null || value == undefined || Number.isNaN(value)) {
+    return defaultValue;
+  }
+    return value;
 };
 
 module.exports = defaultTo;

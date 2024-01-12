@@ -1,5 +1,8 @@
 const getField = (data, field) => {
   // Пишите код здесь
+  if (data === undefined) {
+    return [];
+  } else return data.map(item => item[field]);
 };
 
 export { getField };

@@ -1,5 +1,17 @@
 function getLettersCount(str) {
   // Пишите код здесь
+  if (!!str == false) {
+    return {};
+  } else {
+    let letters = str.toLowerCase().match(/[a-z]/g);
+    let countLetters = {};
+
+    for (let number of letters) {
+      countLetters[number] = countLetters[number] ? countLetters[number] + 1 : 1;
+    }
+
+    return countLetters;
+  }
 }
 
 export { getLettersCount };

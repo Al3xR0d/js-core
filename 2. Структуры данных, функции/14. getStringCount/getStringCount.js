@@ -1,5 +1,11 @@
 function getStringCount(object) {
   // Пишите код здесь
+  if (typeof object == "string") return 1;
+  if (!object) return 0;
+  return Object.values(object).reduce(
+    (acc, cur) => acc + getStringCount(cur),
+    0
+  );
 }
 
 export { getStringCount };

@@ -1,5 +1,6 @@
 const checkWith = (value, checkFunc) => {
   // Пишите код здесь
+  return !!checkFunc(value)
 };
 
 export { checkWith };

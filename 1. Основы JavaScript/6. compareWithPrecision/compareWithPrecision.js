@@ -1,5 +1,6 @@
 function compareWithPrecision(a, b, precision) {
   // Пишите код здесь
+  return Math.abs(a - b) == precision
 }
 
 module.exports = compareWithPrecision;
