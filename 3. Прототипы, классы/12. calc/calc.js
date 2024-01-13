@@ -1,5 +1,20 @@
 class Calc {
   // Пишите код здесь
+  constructor(num = 0) {
+    this.num = num;
+  }
+
+  add(addNum) {
+    return new Calc(this.num + addNum);
+  }
+
+  sub(subNum) {
+    return new Calc(this.num - subNum);
+  }
+
+  result() {
+    return this.num;
+  }
 }
 
 export { Calc };

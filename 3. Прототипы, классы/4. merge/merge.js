@@ -1,5 +1,15 @@
 const merge = (...objs) => {
   // Пишите код здесь
+  let newArr = objs.filter(function(item) {
+    return typeof item === "object";
+  });
+  if (newArr.length === 0) return {};
+  return newArr.reduce(function(result, user) {
+    return {
+      ...result,
+      ...user
+    };
+  }, {});
 };
 
 export { merge };
