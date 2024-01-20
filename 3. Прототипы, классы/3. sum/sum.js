@@ -2,9 +2,9 @@ const sum = (...nums) => {
   // Пишите код здесь
   if (nums.length === 0) return 0;
   else {
-    let newNums = nums.map(item => +item).filter(item => !!item);
-    return newNums.reduce((sum, item) => {
-      return sum + item;
+    return nums.filter(item => +item).reduce((acc, item) => {
+      item = +item;
+      return acc + item;
     }, 0);
   }
 };
