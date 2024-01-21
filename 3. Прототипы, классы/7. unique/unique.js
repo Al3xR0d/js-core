@@ -1,8 +1,6 @@
 const unique = (arr) => {
   // Пишите код здесь
-  let newArr = new Set();
-  arr.map(item => newArr.add(item));
-  return [...newArr];
+  return Array.from(new Set(arr));
 };
 
 export { unique };
