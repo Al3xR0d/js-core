@@ -4,11 +4,8 @@ const merge = (...objs) => {
     return typeof item === "object";
   });
   if (newArr.length === 0) return {};
-  return newArr.reduce(function(result, user) {
-    return {
-      ...result,
-      ...user
-    };
+  return newArr.reduce((acc, item) => {
+    return (acc = Object.assign(acc, item));
   }, {});
 };
 

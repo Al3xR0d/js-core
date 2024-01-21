@@ -1,14 +1,9 @@
 const getLanguagesStatistic = (data) => {
   // Пишите код здесь
-  let filterArr = data.filter(function(item) {
-    return item.year === 2023;
-  });
-  let languageArr = filterArr.map(item => item.language);
-  let obj = {};
-  for (let item of languageArr) {
-    obj[item] = obj[item] ? obj[item] + 1 : 1;
-  }
-  return obj;
+  return data.filter(item => item.year === 2023).reduce((acc, item) => {
+    acc[item.language] = acc[item.language] ? acc[item.language] + 1 : 1;
+    return acc;
+  }, {});
 };
 
 export { getLanguagesStatistic };
